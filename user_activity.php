@@ -1,4 +1,5 @@
 <?php
+
 /*
  * account_activity plugin
  *
@@ -28,4 +29,5 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  */
- ?>
+ 
+?>
