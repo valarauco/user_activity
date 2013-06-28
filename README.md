@@ -30,7 +30,7 @@ This plugin is distributed under the BSD license. Please see user_activity.php f
 | 0.8.4       |
 
 
-#### Contact
+##### Contact
 
 Author: Reymer Antonio Vargas Solano
 e-mail: reymervargas--at--gmail--dot--com
