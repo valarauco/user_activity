@@ -7,5 +7,5 @@ CREATE TABLE user_activity (
 	counter integer NOT NULL
 );
 
-CREATE INDEX u_a_last_idx ON user_activity(last);
-CREATE INDEX u_a_counter_idx ON user_activity(counter);
+CREATE INDEX user_activity_last_idx ON user_activity(last);
+CREATE INDEX user_activity_counter_idx ON user_activity(counter);
