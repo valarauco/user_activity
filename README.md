@@ -1,28 +1,28 @@
 # Roundcube user_activity plugin
 
 
-## Introduction
+### Introduction
 
 
 This plugin logs successful logins  and show on a windows, the IP address, time and date of the auth.
 
 
-Current Status
-## 
+### Current Status
+ 
 * Save satisfactorily IP address, date and time and hits by  IP on the database
 
-## Supported databases
+#### Supported databases
 
 | Database    |
 | ----------- |
 | PostgreSQL  |
 
-### License 
+#### License 
 
 
 This plugin is distributed under the BSD license. Please see user_activity.php for the complete license.
 
-### Tested on
+#### Tested on
 
 
 | Version |
