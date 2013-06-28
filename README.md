@@ -1,4 +1,4 @@
-user_activity plugin
+Roundcube user_activity plugin
 ================================
 
 Introduction
