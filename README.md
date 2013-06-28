@@ -21,7 +21,9 @@ This plugin is distributed under the BSD license. Please see user_activity.php f
 Tested on
 ---------
 
-N/A
+| Version |
+| ----------- |
+| 0.8.4       |
 
 
 Contact
