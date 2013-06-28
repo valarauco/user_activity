@@ -9,7 +9,7 @@ This plugin logs successful logins  and show on a windows, the IP address, time 
 
 Current Status
 -------------------
-* Save satisfactorily IP address, date and time and hits by  IP
+* Save satisfactorily IP address, date and time and hits by  IP on the database
 
 Supported databases
 -------------------
