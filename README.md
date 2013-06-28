@@ -30,5 +30,5 @@ Contact
 -------
 
 Author: Reymer Antonio Vargas Solano
-e-mail: reymervargas@gmail.com
+e-mail: reymervargas--at--gmail--dot--com
 June 17th, 2013
