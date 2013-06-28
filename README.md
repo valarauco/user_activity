@@ -9,9 +9,9 @@ This plugin logs successful logins  and show on a windows, the IP address, time 
 Supported databases
 -------------------
 
-| Database   | Version |
-| ---------- | ------- |
-| N/A        | N/A     |
+| Database    |
+| ----------- |
+| PostgreSQL  |
 
 License 
 -------
