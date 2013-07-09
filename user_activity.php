@@ -42,43 +42,44 @@ class user_activity extends rcube_plugin
     $rcmail = rcmail::get_instance();
 
     $client_ip = $_SERVER['REMOTE_ADDR'];
+    $user_id = $rcmail->user->ID;
 
     $now = date('Y-m-d H:i:s');
 
     $query = $rcmail->db->query(
       "SELECT counter
        FROM user_activity
-       WHERE ip = ?",
-      $client_ip);
+       WHERE ip_address = ? AND user_id = ?",
+      $client_ip, $user_id);
     $result = $rcmail->db->fetch_assoc($query);
-    write_log("user_activity","result: ".print_r($result,true));
+    write_log("user_activity","result: ".print_r($result,true). "\n USER-ID: $user_id");
 
     if ($result)
-      $this->update_user_activity($now, $result['counter'], $client_ip);
+      $this->update_user_activity($now, $result['counter'], $client_ip, $user_id);
     else
-      $this->insert_user_activity($client_ip, $now);
+      $this->insert_user_activity($client_ip, $user_id, $now);
   }
 
-  private function insert_user_activity($client_ip, $now)
+  private function insert_user_activity($client_ip, $user_id, $now)
   {
     $rcmail = rcmail::get_instance();
 
     $query = $rcmail->db->query(
       "INSERT INTO user_activity
-       (ip, first, last, counter)
-       VALUES (?, ?, ?, ?)",
-      $client_ip, $now, $now, 1);
+       (ip_address, user_id, first, last, counter)
+       VALUES (?, ?, ?, ?, ?)",
+      $client_ip, $user_id, $now, $now, 1);
   }
 
-  private function update_user_activity($now, $counter, $client_ip)
+  private function update_user_activity($now, $counter, $client_ip, $user_id)
   {
     $rcmail = rcmail::get_instance();
 
     $query = $rcmail->db->query(
       "UPDATE user_activity
        SET last = ?, counter = ?
-       WHERE ip = ?",
-      $now, $counter + 1, $client_ip);
+       WHERE ip_address = ? AND user_id = ?",
+      $now, $counter + 1, $client_ip, $user_id);
   }
 }
 
