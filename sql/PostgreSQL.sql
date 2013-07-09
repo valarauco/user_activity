@@ -6,7 +6,7 @@ CREATE TABLE user_activity (
         REFERENCES users (user_id) ON DELETE CASCADE ON UPDATE CASCADE,
   first timestamp with time zone NOT NULL,
   last timestamp with time zone NOT NULL,
-  counter integer NOT NULL
+  counter integer NOT NULL,
   PRIMARY KEY (ip_address, user_id)
 );
 
